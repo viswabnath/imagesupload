@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+    Ionic Framework
+    </ion-title>
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+      <h3> Camera Application </h3>
+    <p>Tap on the Buttons</p>
+  </div>
+  
+        <button ion-fab  (click)="takePhoto()"><ion-icon name="md-camera"></ion-icon></button>
+           
+ <ion-grid>
+   <ion-row>
+     <ion-col col-6 *ngFor="let photo of photos;">
+       <ion-card class="block">
+         <img [src]="photo" *ngIf ="photo" (click)="iof()" />
+       </ion-card>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+</ion-content>
